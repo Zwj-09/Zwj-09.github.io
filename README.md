@@ -23,9 +23,6 @@
 ### Form
 - form.html
 
-### Aos
-- aos.html
-
 ### Guess
 - index.html
 
