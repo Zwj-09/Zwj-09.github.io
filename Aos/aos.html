@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS-页面滚动动画库</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="油画展览,使用AOS页面滚动东湖库实现">
+    <meta name="keywords" content="HTML、CSS、JavaScript">
+    <link rel="stylesheet" href="aos.css">
+    <!-- 引入AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- 标题部分 -->
+    <header class="main-header">
+        <h1>油画展览</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, molestiae?</p>
+    </header>
+
+    <!-- 油画部分 -->
+    <main class="container">
+        <section class="card">
+            <img src="./images/paint1.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-left">
+            <img src="./images/paint2.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-right">
+            <img src="./images/paint3.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-left">
+            <img src="./images/paint4.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-right">
+            <img src="./images/paint5.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-in">
+            <img src="./images/paint6.jpg" alt="">
+            <div>
+                <h3>Painting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum consequatur nam architecto.
+                    Cupiditate accusamus doloremque consequatur necessitatibus, tenetur quod placeat voluptatem
+                    provident atque, modi, soluta amet nobis nihil blanditiis accusantium?
+                </p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- 引入AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            delay: 0,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>
