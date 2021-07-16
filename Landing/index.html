@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <a href="#" class="logo">LOGO</a>
+        <!-- 菜单按钮 -->
+        <div id="menu-bar" class="fa fa-bars"></div>
+        <!-- 右侧导航部分 -->
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#feature">feature</a>
+            <a href="#about">about</a>
+            <a href="#usage">usage</a>
+            <a href="#review">review</a>
+            <a href="#pricing">pricing</a>
+        </nav>
+    </header>
+
+
+    <script>
+        let menu = document.querySelector('#menu-bar');
+        let navbar = document.querySelector('.navbar');
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('nav-toggle');
+        });
+    </script>
+</body>
+
+</html>

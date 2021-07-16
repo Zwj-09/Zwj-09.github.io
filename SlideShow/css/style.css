@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /* 首字母大写 */
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.container{
+    position: relative;
+}
+.container .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+   align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+}
+
+.container .slide-container .slide .content{
+    flex: 1 1 350px;
+    animation: slideContent .4s linear .6s backwards;
+}
+/* 控制文本缓慢出现动画 */
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+.container .slide-container .slide .image{
+    flex: 1 1 500px;
+}
+
+.container .slide-container .slide .image img{
+    width: 100%;
+    animation: slideImage .4s linear ;
+}
+/* 控制图片缓慢出现动画 */
+@keyframes slideImage{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.container .slide-container .slide .content h3{ 
+    font-size: 35px;
+    color: #666;
+}
+
+.container .slide-container .slide .content p{ 
+    font-size: 18px;
+    color: #666;
+    padding: 10px 0;
+}
+
+.container .slide-container .slide .content .btn{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #666;
+    color: #fff;
+    font-size: 17px;
+    padding: 9px 40px;
+}
+
+/* 鼠标悬浮在a标签上的效果 */
+.container .slide-container .slide .content .btn:hover{
+    background-color: #333;
+}
+
+/* 隐藏其他多余的页面 */
+.container .slide-container{
+    display: none;
+}
+/* 当页面有了active类才显示 */
+.container .slide-container.active{
+    display:block;
+}
+
+/* 为页面设置背景色 */
+.container .slide-container:nth-child(1) .slide{
+    background: linear-gradient(90deg, #f9f9f9 70%, #ffff99 30.1%);
+}
+.container .slide-container:nth-child(2) .slide{
+    background: linear-gradient(90deg, #f9f9f9 70%, #ff9090 30.1%);
+}
+.container .slide-container:nth-child(3) .slide{
+    background: linear-gradient(90deg, #f9f9f9 70%, #99bbff 30.1%);
+}
+.container .slide-container:nth-child(4) .slide{
+    background: linear-gradient(90deg, #f9f9f9 70%, #90ffb1 30.1%);
+}
+.container .slide-container:nth-child(5) .slide{
+    background: linear-gradient(90deg, #f9f9f9 70%, #a945e2 30.1%);
+}
+/* 左右箭头 */
+.container #prev,
+.container #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: #666;
+    width: 40px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 999;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.container #prev{
+    left: 20px;
+}
+
+.container #next{
+    right: 20px;
+}
+
+.container #prev:hover,
+.container #next:hover{
+    background-color: #666;
+}
+
+/* 媒体查询 */
+@media(max-width:500px){
+    .container #prev{
+        left: 0px;
+        top: 60%;
+    }
+    
+    .container #next{
+        right: 0px;
+        top: 60%;
+    }
+}

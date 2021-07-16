@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShows</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="动画响应图形滑块,自动播放滑块">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+
+    <!-- 引入css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>01、WebSite Layout</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero tempore quam veniam est optio
+                        praesentium numquam modi ad deserunt excepturi dolores exercitationem expedita, doloribus harum,
+                        nisi minima nam sapiente voluptatum.
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="image">
+                    <img src="./img/3.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>02、WebSite Design</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates aliquid adipisci qui rerum
+                        veritatis repellendus pariatur rem tenetur. Inventore esse, perspiciatis iusto voluptatum
+                        voluptates optio officia eius unde! Assumenda, a!
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="image">
+                    <img src="./img/4.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>03、Responsive Layout</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum velit doloribus sunt repellat at
+                        reprehenderit sit, debitis vitae soluta ducimus cum doloremque illo fugit et molestias veritatis
+                        ex consequatur rerum. </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="image">
+                    <img src="./img/5.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>04、WebSites Program</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt excepturi iure ipsum, id, corrupti
+                        est consequuntur illum cum accusantium ea autem iusto distinctio eveniet molestias! Quae
+                        temporibus fugit quas cupiditate?</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="image">
+                    <img src="./img/2.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>05、Responsibilities WebSites</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor earum officiis accusamus obcaecati
+                        dicta, voluptas ipsam optio placeat recusandae quidem, sunt porro? Maiores quod, sint a est
+                        incidunt repellat nemo?</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="image">
+                    <img src="./img/1.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- 左右箭头 -->
+        <div id="prev" onclick="prev()">&lt;</div>
+        <div id="next" onclick="next()">&gt;</div>
+
+        <script>
+            var slides = document.querySelectorAll('.slide-container')
+            var index = 0;
+
+            // prev function
+            function prev() {
+                console.log(slides);
+                console.log('Prev');
+                slides[index].classList.remove('active');
+                index = (index - 1 + slides.length) % slides.length;
+                slides[index].classList.add('active');
+            }
+            // next function
+            function next() {
+
+                console.log(slides);
+                console.log('Next');
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            // 自动加载 轮播图
+            setInterval(next, 7000)
+
+        </script>
+    </div>
+</body>
+
+</html>
